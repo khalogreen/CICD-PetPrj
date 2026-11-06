@@ -1,0 +1,6 @@
+@CICD_PetPrj_HostAddress = http://localhost:5079
+
+GET {{CICD_PetPrj_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

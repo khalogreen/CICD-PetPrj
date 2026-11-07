@@ -17,8 +17,7 @@ namespace CICD_PetPrj.UnitTests
         public void TemperatureF_FromCelsius_ReturnsExpectedFahrenheit(int input, int expectedOutput)
         {
             WeatherForecast weatherForecast = new WeatherForecast() { TemperatureC = input};
-            bool isCorrect = int.Equals(weatherForecast.TemperatureF, expectedOutput);
-            Assert.True(isCorrect, $"Expected {expectedOutput} but got {weatherForecast.TemperatureF}");
+            Assert.Equal(weatherForecast.TemperatureF, expectedOutput);
         }
     }
 }

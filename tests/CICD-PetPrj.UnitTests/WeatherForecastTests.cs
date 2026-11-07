@@ -13,7 +13,7 @@ namespace CICD_PetPrj.UnitTests
         [Theory]
         [InlineData(32, 89)]
         [InlineData(11, 51)]
-        [InlineData(100, 211)]
+        [InlineData(100, 212)]
         public void TemperatureF_FromCelsius_ReturnsExpectedFahrenheit(int input, int expectedOutput)
         {
             WeatherForecast weatherForecast = new WeatherForecast() { TemperatureC = input};

@@ -25,4 +25,11 @@ jobs:
             run: dotnet build --no-restore
 
           - name: Test
-            run: dotnet test --no-build
+            run: dotnet test --no-build --logger "trx;LogFileName=test-result.trx" --results-directory ./TestResults
+
+          - name: Upload test results
+            if: always()
+            uses: actions/upload-artifact@v4
+            with:
+                name: test-results
+                path: TestResults/*.trx
